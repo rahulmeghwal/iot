@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.iot.iotclient.MainActivity">
+
+    <TextView
+        android:text="IOT Android Client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/iotClient"
+        android:textSize="30sp"
+        android:textColor="@android:color/black" />
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:ems="10"
+        android:id="@+id/serverIP"
+        android:layout_width="250dp"
+        android:hint="127.0.0.1"
+        android:singleLine="true"
+        android:layout_alignBaseline="@+id/port"
+        android:layout_alignBottom="@+id/port"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/port"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/iotClient"
+        android:layout_toEndOf="@+id/serverIP"
+        android:hint="6666" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_below="@+id/port"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:id="@+id/message"
+        android:hint="Enter message to send" />
+
+    <Button
+        android:text="Send"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="82dp"
+        android:id="@+id/send"
+        android:layout_below="@+id/message"
+        android:layout_alignParentStart="true"
+        android:layout_width="100dp" />
+
+    <Button
+        android:text="STOP"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:layout_alignBaseline="@+id/send"
+        android:layout_alignBottom="@+id/send"
+        android:layout_alignEnd="@+id/port"
+        android:layout_marginEnd="9dp"
+        android:layout_width="100dp" />
+
+    <TextView
+        android:text="Server IP"
+        android:layout_width="150dp"
+        android:layout_above="@+id/serverIP"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView"
+        android:layout_height="30dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="Port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/serverIP"
+        android:id="@+id/portView"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_alignEnd="@+id/stop"
+        android:layout_alignStart="@+id/port" />
+
+</RelativeLayout>
